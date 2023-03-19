@@ -17,6 +17,8 @@ header
   display: -webkit-box
   display: -ms-flexbox
   display: flex
+  justify-content: space-between
+  width: 100%
 
 .menu-toggle
   display: none
@@ -171,7 +173,6 @@ li.active,
   display: -webkit-box
   display: -ms-flexbox
   display: flex
-  width: 502px
   align-items: center
 
 .header__link
@@ -1477,6 +1478,22 @@ textarea:focus
     width: max-content
   &__items
     display: grid
+    justify-content: flex-end
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 340px
+    gap: 20px
+  &__item
+    background-color: #fff
+    border-radius: 12px
+    &:first-child
+      display: flex
+      justify-content: space-between
+      grid-column-start: 1
+      grid-column-end: span 2
+      & .blog__item-image
+        border-radius: 0 12px 12px 0  
+    &-image
+      border-radius: 12px 12px 0 0  
 
 
 
