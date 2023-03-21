@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Блог компанії Навідмінно</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
 <body>
@@ -96,7 +97,7 @@
     </div>
   </header>
   <section class="page-top">
-    <div class="container">
+    <div class="container__top">
       <div class="page-top__breadcrumbs">
         <ul class="page-top__breadcrumbs__list">
           <li class="page-top__breadcrumbs__item">
@@ -117,12 +118,12 @@
     </div>
   </section>
   <section class="blog">
-    <div class="container">
+    <div class="container__top">
       <div class="blog__categories">
         <h4 class="blog__categories-title">
           Категорії
         </h4>
-        <div class="blog__categories-tags">
+        <div class="blog__categories-tags slider slick-carousel">
           <div class="blog__categories-tag">
             <p class="blog__categories-name">
               Дипломні роботи
@@ -156,6 +157,11 @@
           <div class="blog__categories-tag">
             <p class="blog__categories-name">
               Цікаво знати
+            </p>
+          </div>
+          <div class="blog__categories-tag">
+            <p class="blog__categories-name">
+              Поради
             </p>
           </div>
         </div>
@@ -274,8 +280,20 @@
           </div>
         </a>
       </div>
+      <div class="blog__pagination">
+        <button class="blog__prev-btn blog__prev-btn--disabled">
+          <img src="assets/images/icons/prev.png" alt="На попередню" class="blog__prev-image">
+        </button>
+        <a href="#" class="blog__page blog__page--active">1</a>
+        <a href="#" class="blog__page">2</a>
+        <a href="#" class="blog__page">3</a>
+        <button class="blog__next-btn">
+          <img src="assets/images/icons/next.png" alt="На наступну" class="blog__next-image">
+        </button>
+      </div>
     </div>
   </section>
+
 
   <footer class="footer">
     <div class="container__bottom">
@@ -324,7 +342,9 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.min.js"></script>
+  <script src="//code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

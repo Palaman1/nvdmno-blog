@@ -20,7 +20,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/*')
+  return src('app/assets/images/**/*')
     .pipe(imagemin(
       [
         imagemin.gifsicle({ interlaced: true }),
@@ -34,18 +34,18 @@ function images() {
         })
       ]
     ))
-    .pipe(dest('dist/images'))
+    .pipe(dest('dist/assets/images'))
 }
 
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'app/js/main.js'
+    'app/assets/js/main.js'
   ])
 
   .pipe(concat('main.min.js'))
   .pipe(uglify())
-  .pipe(dest('app/js'))
+  .pipe(dest('app/assets/js'))
   .pipe(browserSync.stream())
 }
 
@@ -58,15 +58,15 @@ function styles() {
     overrideBrowserslist: ['last 10 version'],
     grid: true
   }))
-  .pipe(dest('app/css'))
+  .pipe(dest('app/assets/css'))
   .pipe(browserSync.stream())
 }
 
 function build() {
   return src([
-    'app/css/style.min.css',
-    'app/fonts/**/*',
-    'app/js/main.min.js',
+    'app/assets/css/style.min.css',
+    'app/assets/fonts/**/*',
+    'app/assets/js/main.min.js',
     'app/*.html'
   ], {base: 'app'})
   .pipe(dest('dist'))
@@ -74,7 +74,7 @@ function build() {
 
 function watching() {
   watch(['app/sass/**/*.sass'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['app/assets/js/**/*.js', '!app/assets/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
