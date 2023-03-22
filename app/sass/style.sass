@@ -1423,27 +1423,24 @@ textarea:focus
     &__list
       display: flex
     &__item
-      color: #fff
-      padding-right: 18px
       position: relative
-      margin-top: 10px
-      &::after
+      display: flex
+      padding-right: 18px
+      color: #fff
+      &::before
         content: "›"
-        position: absolute
-        transform: translateY(-2px)
-        right: 6px
+        margin-right: 6px
         font-size: 20px
         line-height: 24px
-        color: #5675A5
+      &:first-child::before
+        content: none
       &:last-child
         color: #5675A5
         cursor: default
-        &::after
-          display: none
     &__link
       color: inherit
       font-size: 13px
-      line-height: 140%
+      line-height: 162%
       &:hover
         color: #fce424
       &-other
@@ -1451,8 +1448,9 @@ textarea:focus
           color: #5675A5
   &__title
     font-size: 36px
-    line-height: 24px
-    margin-bottom: 6px
+    line-height: 28px
+  & .container__top
+    display: block
 
 
 .blog
@@ -1493,11 +1491,13 @@ textarea:focus
     background-color: #fff
     border-radius: 12px
     height: 340px
+    transition: .4s
     &:hover
       -webkit-box-shadow: 4px 9px 20px 0px #c9e0f7
       -moz-box-shadow: 4px 9px 20px 0px #c9e0f7
       box-shadow: 4px 9px 20px 0px #c9e0f7
       transform: scale(1.02)
+      transition: .4s
     &:first-child
       display: flex
       justify-content: space-between
@@ -1510,6 +1510,7 @@ textarea:focus
         border-radius: 0 12px 12px 0
         height: 100%
         margin-bottom: 0px
+        order: 2
       & .blog__item-title
         margin-bottom: 10px
         font-size: 24px
