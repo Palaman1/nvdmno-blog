@@ -134,10 +134,16 @@
 
   .slick-dots
     margin-right: 10px
+    
   .footer__top
     max-width: 91%
+
   .error__title::before
     transform: translate(114px, -288px)
+
+  .post
+    padding: 40px 80px 80px
+
 
 @media (max-width: 978px)
   .container__top
@@ -228,12 +234,12 @@
   .blog__items
     grid-template-columns: 1fr 1fr
   
-  .blog__item
+  .blog__item-post
     &:first-child
       display: block
       grid-column-start: 1
       grid-column-end: 2
-      & .blog__item-image
+      & .blog__item-img
         height: 40%
         margin-bottom: 10px
         border-radius: 12px 12px 0 0
@@ -245,7 +251,6 @@
         margin-bottom: 20px
 
 @media (max-width: 768px)
-
   .container__top
     padding: 8px 10px
 
@@ -465,6 +470,9 @@
       height: auto
       margin-bottom: 40px
       background-position: top center
+
+  .post
+    padding: 40px 50px 80px
 
 @media (max-width: 680px)
   .object::-webkit-scrollbar
@@ -781,6 +789,9 @@
     grid-template-columns: 1fr
     padding: 0 20px
 
+  .post
+    padding: 40px 30px 60px
+
 @media (max-width: 466px)
   .container
     padding: 0 20px
@@ -912,6 +923,11 @@
     .footer__bottom-text
       padding-right: 22px
       text-align: center
+
+  .post
+    padding: 40px 10px 60px
+    &__image
+      height: 220px
 
 @media (max-width: 396px)
   .header-brgr__button
